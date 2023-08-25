@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="x-icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./main.css">
+    <title>Ai면접 코칭</title>
+</head>
+
+<body>
+    <header>
+        <img src="logo.png" class="logo">
+    </header>
+    <main>
+        <section class="container">
+            <div class="content-top">
+                <h3>면접 봐 Dream AI 코칭</h3>
+            </div>
+            <div class="content-middle">
+                <div class="input-box-wrap">
+                    <p class="input-box-title">자기소개서</p>
+                    <div class="input-box-content">
+                        <textarea name="context" id="input-box-text" class="input-box-text" cols="30" rows="10"
+                            placeholder="자기소개서를 입력해 주세요.
+면접 봐 Dream AI가 자소서에서 예상 면접질문을 뽑아드려요!
+최소 100자 이상 최대 4000자까지 입력해주셔야 코딩 가능합니다."></textarea>
+                    </div>
+                    <p class="input-box-count"><span id="context-length">0</span> / 4000</p>
+                </div>
+                <div class="result-box-wrap">
+                    <p class="result-box-title">면접 질문</p>
+                    <div class="result-box-content">
+                        <ul id='result-box-list' class="result-box-list">
+                            <!-- 생성된 질문이 들어가는 곳 -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="content-bottom">
+                <button id='white-btn' class="white-btn">초기화</button>
+                <button id='analysis' class="blue-btn">분석</button>
+                <button id='chat-start' class="main-btn">채팅</button>
+            </div>
+        </section>
+        <section class="modal" id="modal">
+            <div class="modal-content">
+                <div class="modal-close">
+                    <button class="modal-close" id="modal-close">X</button>
+                </div>
+                <div class="chat-content">
+                    <ul id='chat-list' class="chat-list">
+                        <!-- 이곳에 채팅 내역 들어감 -->
+                    </ul>
+                </div>
+                <form id="chat-input" class="chat-input">
+                    <input type="text" id="chat-text" autocomplete="off">
+                    <button type="submit"><i class="fa-regular fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </section>
+        <section class="loading" id="loading">
+            <h1 class="loading-content">LOADING</h1>
+            <img src="./load_icon.png" id="loading-bar">
+        </section>
+    </main>
+    <footer>
+    </footer>
+    <script src="./main.js"></script>
+    <script src="https://kit.fontawesome.com/1bf31ed49f.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

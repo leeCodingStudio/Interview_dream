@@ -1,0 +1,357 @@
+@font-face {
+    font-family: 'NanumGothic';
+    src: url('https://hangeul.pstatic.net/hangeul_static/css/nanum-gothic.css');
+}
+
+* {
+    font-family: 'NanumGothic';
+}
+
+
+html,
+body,
+p,
+ul,
+li,
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    background-image: url('./background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+}
+
+li {
+    list-style: none;
+    display: flex;
+}
+
+/* 헤더 */
+header {
+    width: 1260px;
+    margin: 25px auto 0;
+    height: 100px;
+    line-height: 60px;
+}
+
+.logo {
+    max-height: 100px;
+}
+
+/* 메인 */
+main {
+    width: 100%;
+}
+
+.container {
+    width: 1260px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* 타이틀 */
+.content-top {
+    padding: 16px 0;
+    margin-bottom: 1px;
+    background-color: #d6dceb;
+}
+
+.content-top>h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* 자소서 입력 및 리스트 출력 */
+.content-middle {
+    width: 100%;
+    border-top: 2px solid;
+    box-sizing: border-box;
+    display: flex;
+    height: 590px;
+    background-color: white;
+}
+
+.content-middle>div {
+    width: 50%;
+    box-sizing: border-box;
+    text-align: start;
+    border: 1px solid #ddd;
+    height: 100%;
+}
+
+/* 자소서 */
+.input-box-title {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 16px;
+}
+
+.input-box-content {
+    padding: 0 16px;
+}
+
+.input-box-text {
+    overflow-y: scroll;
+    padding-right: 14px;
+    padding-left: 16px;
+    width: 100%;
+    height: 502px;
+    border: 0;
+    box-sizing: border-box;
+    color: #444;
+    font-size: 16px;
+    letter-spacing: -1px;
+    line-height: 28px;
+    resize: none;
+}
+
+.input-box-text:focus {
+    outline: none;
+    border: 2px solid #6446ff;
+    border-radius: 8px;
+}
+
+.input-box-count {
+    padding: 0 16px;
+    text-align: end;
+}
+
+.input-box-count>span {
+    color: red;
+}
+
+/* 질문 리스트 */
+.result-box-title {
+    font-size: 18px;
+    color: #888;
+    padding: 16px;
+    font-weight: bold;
+}
+
+.result-box-content {
+    padding: 0 16px;
+}
+
+.result-box-list {
+    overflow-y: scroll;
+    height: 502px;
+}
+
+.result-box-list>li {
+    padding: 20px 30px 20px 0;
+    width: 100%;
+    border-top: 1px solid #ddd;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+
+/* 버튼 */
+.content-bottom {
+    margin-top: 24px;
+}
+
+.content-bottom>button {
+    display: inline-block;
+    margin: 0 2px;
+    padding: 14px 0;
+    width: 120px;
+    height: 48px;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.white-btn {
+    border: 1px solid #dbdbdb;
+    color: #444;
+    background-color: #fff;
+}
+
+.blue-btn {
+    border: none;
+    color: #fff;
+    background-color: #4876ef;
+}
+
+.main-btn {
+    border: none;
+    color: #fff;
+    background-color: deepskyblue;
+}
+
+#chat-start {
+    display: none;
+}
+
+
+/* 채팅창 */
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.modal.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    width: 766px;
+    height: 800px;
+    border-radius: 30px;
+    border: 4px solid #d8d6eb;
+    padding: 16px;
+}
+
+/* 닫기 버튼 */
+.modal-close {
+    text-align: end;
+    margin-bottom: 5px;
+}
+
+.modal-close>button {
+    border: 0;
+    border-radius: 10px;
+    background-color: #d8d6eb;
+    font-size: 20px;
+    font-weight: bold;
+    width: 35px;
+    height: 35px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* 채팅 내용 */
+.chat-list {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    height: 650px;
+}
+
+.chat-list>li {
+    padding-top: 30px;
+}
+
+.chat-list>.interviewee {
+    align-self: flex-end;
+}
+
+.chat-list>li>p {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid #d8d6eb;
+    padding: 20px 20px;
+    max-width: 400px;
+    min-width: 10px;
+}
+
+.interviewee>p {
+    margin-right: 12px;
+}
+
+.interviewer {
+    display: inline-block;
+    background-color: #e5e1ff;
+}
+
+.interviewer_li {
+    align-self: flex-start;
+}
+
+
+.icon {
+    display: inline-block;
+    background-image: url('./com_icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    margin: auto 10px;
+    border: 2px solid #ddd;
+    border-radius: 100%;
+}
+
+#chat_loading p {
+    background-image: url('https://i.pinimg.com/originals/b4/4e/22/b44e229598a8bdb7f2f432f246fb0813.gif');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30px;
+
+    -webkit-filter: opacity(.5) drop-shadow(0 0 0 #e5e1ff);
+    filter: opacity(.5) drop-shadow(0 0 0 #e5e1ff)
+}
+
+/* 채팅 입력 */
+.chat-input input {
+    margin-top: 40px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    height: 50px;
+    width: 700px;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.chat-input input:focus {
+    outline: none;
+    border: 1px solid #6446ff;
+}
+
+.chat-input button {
+    margin-top: 40px;
+    color: white;
+    font-size: 18px;
+    background-color: #6446ff;
+    height: 50px;
+    width: 60px;
+    border: 0;
+    border-radius: 5px;
+    padding: 0px 16px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+/* 로딩창 */
+.loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.loading.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loading-content {
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+}
