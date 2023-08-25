@@ -1,5 +1,7 @@
 # 면접스터디
 - [Notion 포트폴리오](https://morning-collarbone-330.notion.site/10443fd57b7744a79931dd84fe586d5a)
+- [Client Git](https://github.com/leeCodingStudio/interview_dream_client)
+- [Server Git](https://github.com/leeCodingStudio/interview_dream_server)
 ---
 
 ### 개발 범위
