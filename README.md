@@ -1,4 +1,5 @@
 # 면접스터디
+- [URL](https://kdt-team-2.github.io/)
 - [Notion 포트폴리오](https://morning-collarbone-330.notion.site/10443fd57b7744a79931dd84fe586d5a)
 - [Client Git](https://github.com/leeCodingStudio/interview_dream_client)
 - [Server Git](https://github.com/leeCodingStudio/interview_dream_server)
@@ -43,3 +44,10 @@
 - PyTorch
 - KoGPT-2
 - SentencePieceBPETokenizer
+
+### 스크린샷
+
+---
+
+![image](https://github.com/leeCodingStudio/Interview_dream/assets/115694780/e1892a54-c9b5-43f4-a63e-301f65311f50)
+![image](https://github.com/leeCodingStudio/Interview_dream/assets/115694780/b8c8ab09-90a4-4413-a95b-35f03ea1ed7d)
